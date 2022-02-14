@@ -6,14 +6,14 @@ function Login({ providers }) {
       <h1>Login Page</h1>
 
       {Object.values(providers).map((provider) => (
-        <div>
+        <div key={provider.name}>
           <button
             className="bg-black text-slate-200 h-200 w-150 p-4 rounded-full"
             onClick={() => {
               signIn(provider.id, { callbackUrl: "/" });
             }}
           >
-            login with {provider.name}
+            LOGIN KARO {provider.name}
           </button>
         </div>
       ))}
